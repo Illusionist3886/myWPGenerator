@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('myGenCore.welcome');
 });
+Route::get('/index', function () {
+    return view('myGenCore.index');
+});
+

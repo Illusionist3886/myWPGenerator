@@ -1,0 +1,52 @@
+span.red{
+	color: red;
+}
+.theaddesign{
+	background: #201212;
+	color: #fff;
+}
+.somepad{
+	padding:20px auto !important;
+}
+#share-fb:hover{
+	color: #3b5999;
+}
+#share-tw:hover{
+	color: #55acee;
+}
+#share-li:hover{
+	color: #0077B5;
+}
+#share-gp:hover{
+	color: #dd4b39;
+}
+.sharer {
+    color: #807878;
+}
+.warning{
+	color: red;
+}
+.de{
+	margin-top: 8%;
+	text-align: center;
+}
+@media only screen and (min-width: 642px ) AND (max-width: 769px) {
+    .de{
+	margin-top: 16%;
+	text-align: center;
+	}
+}
+@media only screen and (min-width: 927px ) AND (max-width: 1027px) {
+    .de{
+	margin-top: 20%;
+	text-align: center;
+	}
+}
+
+.spinnerdie input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; 
+    -moz-appearance:textfield;
+}
