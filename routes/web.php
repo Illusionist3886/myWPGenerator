@@ -17,4 +17,9 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('myGenCore.index');
 });
-
+Route::get('/header', function () {
+    return view('myGenCore.header');
+});
+Route::get('/style', function () {
+    return view('myGenCore.style');
+});

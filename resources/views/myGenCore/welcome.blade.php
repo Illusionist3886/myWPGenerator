@@ -34,6 +34,7 @@
                         <li><a href="">attachment.php</a></li>
                         <li><a href="">image.php</a></li>
                         <li><a href="">404.php</a></li>
+                        <li><a href="">screenshot.png [600X450]</a></li>
                     </ul>
                 </div>
             </div>

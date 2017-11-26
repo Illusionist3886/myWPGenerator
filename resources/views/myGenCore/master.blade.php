@@ -80,7 +80,13 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i> Basic<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ url('/') }}/index"><i class="fa  fa-address-book fa-fw"></i> Index PHP</a>
+                                    <a href="{{ url('/') }}/index"><i class="fa fa-address-book fa-fw"></i> Index PHP</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/') }}/header"><i class="fa fa-address-book fa-fw"></i> Header PHP</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/') }}/style"><i class="fa fa-address-book fa-fw"></i> Style CSS</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('/') }}/menu"><i class="fa fa-sign-in fa-fw"></i> Calling Menu in Header</a>
