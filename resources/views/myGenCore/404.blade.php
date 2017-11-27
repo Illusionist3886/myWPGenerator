@@ -1,30 +1,28 @@
 @extends('myGenCore/master')
-@section('title', 'header.php Generator')
+@section('title', 'Welcome')
 @section('content')
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">Basic header.php Page</h3>
+                    <h3 class="page-header">Basic 404</h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
+                <form action="">
                 <div class="col-md-12">
                     
-                    <pre id="header-basic">&lt;!DOCTYPE html&gt;
-    &lt;html &lt;?php language_attributes(); ?&gt; class="no-js no-svg"&gt;
-        &lt;head&gt;
-                &lt;meta charset="&lt;?php bloginfo( 'charset' ); ?&gt;"&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-                &lt;?php wp_head(); ?&gt;
-        &lt;/head>
-        &lt;body &lt;?php body_class(); ?&gt; &gt;                      
-                    </pre>
-                    <button class="btn btn-success dell" data-clipboard-target="#header-basic">
-                        Copy to clipboard
-                    </button>
+                    <pre id="err-basic">    &lt;?php get_header(); ?&gt;
+        &lt;?php _e( 'Oops! That page can&rsquo;t be found.', '<span id="texdom">twentyseventeen</span>' ); ?&gt;
+    &lt;?php get_footer(); ?&gt;</pre>
+    <input type="text" id="textdomain" placeholder="TextDomain">
+                    <input type="button" value="Generate" class="btn btn-primary" onclick="delowar()">
+                    
                 </div>
-
+                </form>
+                <button class="btn btn-success dell" data-clipboard-target="#err-basic">
+                        Copy to clipboard
+                </button>
             </div>
             <!-- /.row -->
             <!-- /.row -->
@@ -53,8 +51,13 @@
         <script src="{{ url('/') }}/userDash/assets/js/clipboard.min.js"></script>
         <script>
             var clipboard = new Clipboard('.dell');
+            function delowar()
+            {
+                document.getElementById("texdom").innerHTML=document.getElementById("textdomain").value;
+                document.getElement
+            }
         </script>
-        
+
 
     </body>
 

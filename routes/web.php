@@ -23,3 +23,9 @@ Route::get('/header', function () {
 Route::get('/style', function () {
     return view('myGenCore.style');
 });
+Route::get('/footer', function () {
+    return view('myGenCore.footer');
+});
+Route::get('/404', function () {
+    return view('myGenCore.404');
+});

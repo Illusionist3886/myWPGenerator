@@ -1,30 +1,23 @@
 @extends('myGenCore/master')
-@section('title', 'header.php Generator')
+@section('title', 'Welcome')
 @section('content')
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">Basic header.php Page</h3>
+                    <h3 class="page-header">Generate Footer</h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
                 <div class="col-md-12">
                     
-                    <pre id="header-basic">&lt;!DOCTYPE html&gt;
-    &lt;html &lt;?php language_attributes(); ?&gt; class="no-js no-svg"&gt;
-        &lt;head&gt;
-                &lt;meta charset="&lt;?php bloginfo( 'charset' ); ?&gt;"&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-                &lt;?php wp_head(); ?&gt;
-        &lt;/head>
-        &lt;body &lt;?php body_class(); ?&gt; &gt;                      
-                    </pre>
-                    <button class="btn btn-success dell" data-clipboard-target="#header-basic">
+                    <pre id="footer-basic">&lt;?php wp_footer(); ?&gt;
+        &lt;/body&gt;
+&lt;/html&gt;</pre>
+                    <button class="btn btn-success dell" data-clipboard-target="#footer-basic">
                         Copy to clipboard
                     </button>
                 </div>
-
             </div>
             <!-- /.row -->
             <!-- /.row -->
@@ -54,7 +47,6 @@
         <script>
             var clipboard = new Clipboard('.dell');
         </script>
-        
 
     </body>
 

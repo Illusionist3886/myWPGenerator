@@ -89,6 +89,12 @@
                                     <a href="{{ url('/') }}/style"><i class="fa fa-address-book fa-fw"></i> Style CSS</a>
                                 </li>
                                 <li>
+                                    <a href="{{ url('/') }}/footer"><i class="fa fa-address-book fa-fw"></i> Footer PHP</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/') }}/404"><i class="fa fa-address-book fa-fw"></i> 404 PHP</a>
+                                </li>
+                                <li>
                                     <a href="{{ url('/') }}/menu"><i class="fa fa-sign-in fa-fw"></i> Calling Menu in Header</a>
                                 </li>
                                 <li>
