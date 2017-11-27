@@ -1,5 +1,5 @@
 @extends('myGenCore/master')
-@section('title', 'Welcome')
+@section('title', 'footer.php')
 @section('content')
         <div id="page-wrapper">
             <div class="row">

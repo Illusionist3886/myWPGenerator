@@ -1,28 +1,15 @@
 @extends('myGenCore/master')
-@section('title', '404.php')
+@section('title', 'Welcome')
 @section('content')
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">Basic 404</h3>
+                    <h3 class="page-header">Features Included</h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
-                <form action="">
-                <div class="col-md-12">
-                    
-                    <pre id="err-basic">    &lt;?php get_header(); ?&gt;
-        &lt;?php _e( 'Oops! That page can&rsquo;t be found.', '<span id="texdom">twentyseventeen</span>' ); ?&gt;
-    &lt;?php get_footer(); ?&gt;</pre>
-    <input type="text" id="textdomain" placeholder="TextDomain">
-                    <input type="button" value="Generate" class="btn btn-primary" onclick="delowar()">
-                    
-                </div>
-                </form>
-                <button class="btn btn-success dell" data-clipboard-target="#err-basic">
-                        Copy to clipboard
-                </button>
+                
             </div>
             <!-- /.row -->
             <!-- /.row -->
@@ -48,16 +35,6 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="{{ url('/') }}/userDash/assets/js/sb-admin-2.js"></script>
-        <script src="{{ url('/') }}/userDash/assets/js/clipboard.min.js"></script>
-        <script>
-            var clipboard = new Clipboard('.dell');
-            function delowar()
-            {
-                document.getElementById("texdom").innerHTML=document.getElementById("textdomain").value;
-                document.getElement
-            }
-        </script>
-
 
     </body>
 

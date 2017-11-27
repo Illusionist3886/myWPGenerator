@@ -29,3 +29,9 @@ Route::get('/footer', function () {
 Route::get('/404', function () {
     return view('myGenCore.404');
 });
+Route::get('/EnqueueGeneral', function () {
+    return view('myGenCore.EnqueueGeneral');
+});
+Route::get('/EnqueueAdmin', function () {
+    return view('myGenCore.EnqueueAdmin');
+});
