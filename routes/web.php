@@ -32,6 +32,6 @@ Route::get('/404', function () {
 Route::get('/EnqueueGeneral', function () {
     return view('myGenCore.EnqueueGeneral');
 });
-Route::get('/EnqueueAdmin', function () {
-    return view('myGenCore.EnqueueAdmin');
+Route::get('/SideBar', function () {
+    return view('myGenCore.SideBar');
 });

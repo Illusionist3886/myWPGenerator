@@ -98,6 +98,9 @@
                                     <a href="{{ url('/') }}/EnqueueGeneral"><i class="fa fa-address-book fa-fw"></i> Enqueue Style and Script</a>
                                 </li>
                                 <li>
+                                    <a href="{{ url('/') }}/SideBar"><i class="fa fa-address-book fa-fw"></i> Side Bar</a>
+                                </li>
+                                <li>
                                     <a href="{{ url('/') }}/menu"><i class="fa fa-sign-in fa-fw"></i> Calling Menu in Header</a>
                                 </li>
                                 <li>
