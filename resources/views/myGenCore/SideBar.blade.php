@@ -129,6 +129,14 @@ add_action('widgets_init','<span id="sidebarfunchook">my_sidebar</span>');</pre>
                 document.getElementById("sidebarfunchook").innerHTML = document.getElementById("funcname").value;
             }
 
+            function noobreplace(pass)
+            {
+                pass = pass.replace(/>/gi,"&gt;");
+                pass = pass.replace(/</gi,"&lt;");
+
+                return pass;
+            }
+
             function sidebarfungen()
             {
                 var name = document.getElementById("sidebarname").value;
@@ -140,15 +148,15 @@ add_action('widgets_init','<span id="sidebarfunchook">my_sidebar</span>');</pre>
                 var after_title = document.getElementById("sidebaraftertitle").value;
                 var text_domain = document.getElementById("textdomain").value;
 
-                var data = "register_sidebar( array(<br/>\
+                var data = "    register_sidebar( array(<br/>\
         'name'          => __( '"+name+"', '"+text_domain+"' ),<br/>\
         'id'            => '"+id+"',<br/>\
-        'description'   => __( '"+description+"', '"+text_domain+"' ),<br/>\
-        'before_widget' => '"+before_widgets+"',<br/>\
-        'after_widget'  => '"+after_widgets+"',<br/>\
-        'before_title'  => '"+before_title+"',<br/>\
-        'after_title'   => '"+after_title+"',<br/>\
-    ) );";
+        'description'   => __( '"+noobreplace(description)+"', '"+text_domain+"' ),<br/>\
+        'before_widget' => '"+noobreplace(before_widgets)+"',<br/>\
+        'after_widget'  => '"+noobreplace(after_widgets)+"',<br/>\
+        'before_title'  => '"+noobreplace(before_title)+"',<br/>\
+        'after_title'   => '"+noobreplace(after_title)+"',<br/>\
+    ) );<br/>";
 
                $( "#sidebars" ).append( data );
 
