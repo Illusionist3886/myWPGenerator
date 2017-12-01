@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <pre id="sidebarfunction">function <span id="sidebarfunc">my_sidebar</span>()
 {
-<span id="sidebars">df</span>
+<span id="sidebars"></span>
 }
 add_action('widgets_init','<span id="sidebarfunchook">my_sidebar</span>');</pre>
                 </div>
@@ -92,7 +92,7 @@ add_action('widgets_init','<span id="sidebarfunchook">my_sidebar</span>');</pre>
                             </tr>
                         </table>
                     </form>
-                    <button class="btn btn-primary" onclick="sidebarfun()" style="margin-bottom: 20px;">
+                    <button class="btn btn-primary" onclick="sidebarfungen()" style="margin-bottom: 20px;">
                         Generate SideBar
                     </button>
                 </div>
@@ -128,8 +128,34 @@ add_action('widgets_init','<span id="sidebarfunchook">my_sidebar</span>');</pre>
                 document.getElementById("sidebarfunc").innerHTML = document.getElementById("funcname").value;
                 document.getElementById("sidebarfunchook").innerHTML = document.getElementById("funcname").value;
             }
-        </script>
 
+            function sidebarfungen()
+            {
+                var name = document.getElementById("sidebarname").value;
+                var id = document.getElementById("sidebarid").value;
+                var description = document.getElementById("sidebardescription").value;
+                var before_widgets = document.getElementById("sidebarbeforewidget").value;
+                var after_widgets = document.getElementById("sidebarafterwidget").value;
+                var before_title = document.getElementById("sidebarbeforetitle").value;
+                var after_title = document.getElementById("sidebaraftertitle").value;
+                var text_domain = document.getElementById("textdomain").value;
+
+                var data = "register_sidebar( array(<br/>\
+        'name'          => __( '"+name+"', '"+text_domain+"' ),<br/>\
+        'id'            => '"+id+"',<br/>\
+        'description'   => __( '"+description+"', '"+text_domain+"' ),<br/>\
+        'before_widget' => '"+before_widgets+"',<br/>\
+        'after_widget'  => '"+after_widgets+"',<br/>\
+        'before_title'  => '"+before_title+"',<br/>\
+        'after_title'   => '"+after_title+"',<br/>\
+    ) );";
+
+               $( "#sidebars" ).append( data );
+
+            }
+
+
+        </script>
     </body>
 
     </html>
