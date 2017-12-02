@@ -1,40 +1,39 @@
 @extends('myGenCore/master')
-@section('title', 'Register Nav Menu')
+@section('title', 'Add Theme Support')
 @section('content')
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">Basic Menus</h3>
+                    <h3 class="page-header">Post Query</h3>
+                    <ul>
+                        <li><a href="https://developer.wordpress.org/reference/functions/add_theme_support/" target="_blank" class="btn btn-link">Add Theme Support Reference</a></li>
+                    </ul>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <pre id="register">if(function_exists('register_nav_menu')){
-    register_nav_menu('<span id="singid">main-menu</span>',__('<span id="singdesc">Main Menu</span>','<span id="singdom">tweentyseven</span>'));
-}</pre>     
+                    <pre id="DefaultFunc">function <span id="funname">delowar_default_functions</span>()
+{<span id="addthemesupportdata"></span>
+}
+add_action('after_setup_theme','<span id="funcname">delowar_default_functions</span>');
+</pre>     
                 </div>
                 <div class="col-md-12">
                     <table class="table table-striped table-bordered">
                         <tr>
                             <form action="">
-                            <td>
-                                <input type="text" id="singlemenuid" placeholder="Menu ID" class="form-control">
-                            </td>
-                            <td>
-                                <input type="text" id="singlemenuname" placeholder="Menu Name" class="form-control">
-                            </td>
-                            <td>
-                                <input type="text" id="singlemenutextdomain" placeholder="Text Domain" class="form-control">
+                            <td class="col-md-8">
+                                <input type="text" id="funcnameinput" placeholder="Function Name" class="form-control">
                             </td>
                             </form>
-                            <td colspan="2">
-                                <button class="btn btn-primary pull-right" onclick="singlemenugen()">
-                                    Generate Menu
+                            <td>
+                                <button class="btn btn-primary btn-block text-center pull-right" onclick="commentfunc()">
+                                    Generate Base Function
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-success single" data-clipboard-target="#register">
+                                <button class="btn btn-success defaultfunct" data-clipboard-target="#DefaultFunc">
                                     Copy Function
                                 </button>
                             </td>
@@ -45,39 +44,64 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <pre id="registernavmenus">register_nav_menus( array(
-<span id="multimenu"></span>) );</pre>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-stripe table-bordered">
+                        <tr>
+                            <th colspan="6" class="text-center">Click Any Button to Generate Respective Function</th>
+                        </tr>
                         <tr>
                             <td>
-                                <input type="text" id="multimenuid" placeholder="Menu ID" class="form-control">
-                            </td>
-                            <td>
-                                <input type="text" id="multimenuname" placeholder="Menu Name" class="form-control">
-                            </td>
-                            <td>
-                                <input type="text" id="multimenutextdomain" placeholder="Text Domain" class="form-control">
-                            </td>
-                            <td colspan="2">
-                                <button class="btn btn-primary pull-right" onclick="multimenugen()">
-                                    Generate Menu
+                                <button class="btn btn-primary btn-block text-center" onclick="titletag()">
+                                    Title Tag
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-success multi" data-clipboard-target="#registernavmenus">
-                                    Copy Function
+                                <button class="btn btn-primary btn-block text-center" onclick="postthumbnail()">
+                                    Post Thumbnail
                                 </button>
                             </td>
+                            <td>
+                                <button class="btn btn-info btn-block text-center" onclick="custombackground()" title="Can Pass some default arguments">
+                                    Custom Background
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-info btn-block text-center" onclick="customheader()" title="Can Pass some default arguments">
+                                    Custom Header
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-block text-center" onclick="textdomain()" title="not added">
+                                    Text Domain
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-warning btn-block text-center" onclick="postformat()" title="Some default argumetns">
+                                    Post Format
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary btn-block text-center" onclick="html5()">
+                                    HTML5
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-block btn-info text-center" onclick="customlogo()" title="Have some default argumetns">
+                                    Custom Logo
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-block text-center" onclick="startercontent()" title="not added">
+                                    Starter Content
+                                </button>
+                            </td>
+                            
                         </tr>
                     </table>
                 </div>
             </div>
-            <!-- /.row -->
-            <!-- /.row -->
+            
         </div>
         <!-- /#page-wrapper -->
 
@@ -102,28 +126,69 @@
         <script src="{{ url('/') }}/userDash/assets/js/sb-admin-2.js"></script>
         <script src="{{ url('/') }}/userDash/assets/js/clipboard.min.js"></script>
         <script>
-            var clipboard = new Clipboard('.single');
-            var clipboard = new Clipboard('.multi');
+            var clipboard = new Clipboard('.defaultfunct');
 
-            function singlemenugen()
+            function commentfunc()
             {
-                document.getElementById("singid").innerHTML = document.getElementById("singlemenuid").value;
-                document.getElementById("singdesc").innerHTML = document.getElementById("singlemenuname").value;
-                document.getElementById("singdom").innerHTML = document.getElementById("singlemenutextdomain").value;
-
-
+                document.getElementById("funname").innerHTML = document.getElementById("funcnameinput").value;
+                document.getElementById("funcname").innerHTML = document.getElementById("funcnameinput").value;
             }
 
-            function multimenugen()
+            function titletag()
             {
-                var multiid = document.getElementById("multimenuid").value;
-                var multiname = document.getElementById("multimenuname").value;
-                var multitextdom = document.getElementById("multimenutextdomain").value;
-
-                var multivalue = "   '"+multiid+"'    => __( '"+multiname+"', '"+multitextdom+"' ),<br/>";
-
-                $( "#multimenu" ).append( multivalue );
+                var myVal = "<br/>\tadd_theme_support( 'title-tag' );";
+                $("#addthemesupportdata").append(myVal)
             }
+
+            function postthumbnail()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'post-thumbnails' );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+            function custombackground()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'custom-background' );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+            function customheader()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'custom-header' );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+            function postformat()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'post-formats' );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+            function html5()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+            function customlogo()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'custom-logo' );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+            function startercontent()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );";
+                $("#addthemesupportdata").append(myVal)
+            }
+            
+            function textdomain()
+            {
+                var myVal = "<br/>\tadd_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
+
 
         </script>
     </body>

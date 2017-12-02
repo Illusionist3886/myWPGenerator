@@ -1,5 +1,5 @@
 @extends('myGenCore/master')
-@section('title', 'General Blog Post Query')
+@section('title', 'Add Theme Support')
 @section('content')
         <div id="page-wrapper">
             <div class="row">
@@ -20,13 +20,7 @@ if ( have_posts() ) :
 while(have_posts()) : the_post();
 ?&gt;
 
-&lt;?php 
-if ( has_post_thumbnail() )
-{
-    the_post_thumbnail();
-}
-?&gt;
-
+&lt;?php the_post_thumbnail();?&gt;
 &lt;?php the_permalink();?&gt;
 &lt;?php the_title();?&gt;
 &lt;?php the_author();?&gt;
