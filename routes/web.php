@@ -41,6 +41,9 @@ Route::get('/RegMenu', function () {
 Route::get('/CallMenu', function () {
     return view('myGenCore.CallMenu');
 });
+Route::get('/GeneralPost', function () {
+    return view('myGenCore.GeneralPost');
+});
 Route::get('/GeneralFunctions', function () {
     return view('myGenCore.GeneralFunctions');
 });
