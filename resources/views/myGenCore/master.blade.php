@@ -107,9 +107,6 @@
                                     <a href="{{ url('/') }}/CallMenu"><i class="fa fa-address-book fa-fw"></i> Calling Menu [Header]</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/') }}/GenPostQuery"><i class="fa fa-address-book fa-fw"></i> General Post Query</a>
-                                </li>
-                                <li>
                                     <a href="{{ url('/') }}/GeneralPost"><i class="fa fa-exchange fa-fw"></i> General Post Query</a>
                                 </li>
                             </ul>
@@ -121,7 +118,7 @@
                                     <a href="{{ url('/') }}/GeneralFunctions"><i class="fa fa-address-book fa-fw"></i> General Functions</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/') }}/GeneralFunctions"><i class="fa fa-address-book fa-fw"></i> Theme Support</a>
+                                    <a href="{{ url('/') }}/AddThemeSupport"><i class="fa fa-address-book fa-fw"></i> Theme Support</a>
                                 </li>
                             </ul>
                         </li>
