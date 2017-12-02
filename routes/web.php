@@ -35,3 +35,9 @@ Route::get('/EnqueueGeneral', function () {
 Route::get('/SideBar', function () {
     return view('myGenCore.SideBar');
 });
+Route::get('/RegMenu', function () {
+    return view('myGenCore.RegMenu');
+});
+Route::get('/CallMenu', function () {
+    return view('myGenCore.CallMenu');
+});

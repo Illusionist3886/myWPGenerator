@@ -101,10 +101,27 @@
                                     <a href="{{ url('/') }}/SideBar"><i class="fa fa-address-book fa-fw"></i> Side Bar</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/') }}/menu"><i class="fa fa-sign-in fa-fw"></i> Calling Menu in Header</a>
+                                    <a href="{{ url('/') }}/RegMenu"><i class="fa fa-address-book fa-fw"></i> Register Menu [Theme Support]</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/') }}/CallMenu"><i class="fa fa-address-book fa-fw"></i> Calling Menu [Header]</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/') }}/GenPostQuery"><i class="fa fa-address-book fa-fw"></i> General Post Query</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('/') }}/GeneralPost"><i class="fa fa-exchange fa-fw"></i> General Post Query</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i>Essential Functions<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ url('/') }}/GeneralFunctions"><i class="fa fa-address-book fa-fw"></i> General Functions</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/') }}/GeneralFunctions"><i class="fa fa-address-book fa-fw"></i> Theme Support</a>
                                 </li>
                             </ul>
                         </li>
