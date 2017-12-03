@@ -10,6 +10,15 @@
 &lt;?php bloginfo('charset'); ?&gt;
 &lt;?php bloginfo('description'); ?&gt;
                         </pre>
+                        <pre id="readmore">function read_more($limit)
+{
+    $post_content = explode(" ", get_the_content());
+    $less_content = array_slice($post_content, 0, $limit);
+    echo implode(" ", $less_content);
+}</pre>
+<button class="btn btn-success postqugen" data-clipboard-target="#readmore">
+                                    Copy Function
+                                </button>
                     
                     
                 </div>
@@ -42,7 +51,10 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="{{ url('/') }}/userDash/assets/js/sb-admin-2.js"></script>
-
+        <script src="{{ url('/') }}/userDash/assets/js/clipboard.min.js"></script>
+        <script>
+            var clipboard = new Clipboard('.postqugen');
+        </script>
     </body>
 
     </html>
