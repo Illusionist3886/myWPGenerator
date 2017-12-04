@@ -60,17 +60,17 @@ add_action('after_setup_theme','<span id="funcname">delowar_default_functions</s
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-info btn-block text-center" onclick="custombackground()" title="Can Pass some default arguments">
+                                <button class="btn btn-info btn-block text-center" data-toggle="modal" data-target="#custombg" title="Can Pass some default arguments">
                                     Custom Background
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-info btn-block text-center" onclick="customheader()" title="Can Pass some default arguments">
+                                <button class="btn btn-info btn-block text-center" data-toggle="modal" data-target="#customhead" title="Can Pass some default arguments">
                                     Custom Header
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-warning btn-block text-center" onclick="textdomain()" title="not added">
+                                <button class="btn btn-info btn-block text-center" data-toggle="modal" data-target="#textdom" title="Can Pass some default arguments">
                                     Text Domain
                                 </button>
                             </td>
@@ -87,7 +87,7 @@ add_action('after_setup_theme','<span id="funcname">delowar_default_functions</s
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-block btn-info text-center" onclick="customlogo()" title="Have some default argumetns">
+                                <button class="btn btn-info btn-block text-center" data-toggle="modal" data-target="#customlog" title="Can Pass some default arguments">
                                     Custom Logo
                                 </button>
                             </td>
@@ -99,6 +99,147 @@ add_action('after_setup_theme','<span id="funcname">delowar_default_functions</s
                             
                         </tr>
                     </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                      <!-- Modal Custom Background -->
+                      <div class="modal fade" id="custombg" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Custom Background</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p>Some text in the modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" onclick="custombackground()" data-dismiss="modal">Generate Basic</button>
+                                <button type="button" class="btn btn-primary">Generate Advance</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+
+                      <!-- Modal Custom Header-->
+                      <div class="modal fade" id="customhead" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Custom Header</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                  <div class="col-md-4">
+                                      <input type="text" id="defaultimageinput" class="form-control" placeholder="default-image" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="randomdefaultinput" class="form-control" placeholder="random-default[boolean]" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="headerwidthinput" class="form-control" placeholder="Width [No px]" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="headerheightinput" class="form-control" placeholder="Height [No px]" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="headerflexheightinput" class="form-control" placeholder="Flex Height [boolean]" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="headerflexwidthinput" class="form-control" placeholder="Flex Width [boolean]" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="headerdefaulttextcolor" class="form-control" placeholder="Default Text Color" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="text" id="" class="form-control" placeholder="" /> <br>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" onclick="customheader()" data-dismiss="modal">Generate Basic</button>
+                                <button type="button" class="btn btn-primary" onclick="customheaderadvance()" data-dismiss="modal">Generate Advance</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+
+                      <!-- Modal Text Domain -->
+                      <div class="modal fade" id="textdom" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Theme Text Domain</h4>
+                            </div>
+                            <div class="modal-body">
+                              <input type="text" id="mydomaininput" placeholder="Text Domain Name" class="form-control" > <br>
+                              <input type="text" id="folderinput" placeholder="Directory Name" class="form-control" >
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="textdomain()"  data-dismiss="modal">Generate</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+
+                      <!-- Modal Custom Logo-->
+                      <div class="modal fade" id="customlog" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Custom Logo</h4>
+                            </div>
+                            <div class="modal-body">
+                              <input type="number" name="" id="logoheightinput" placeholder="Height [Don't put px]" class="form-control"> <br>
+                              <input type="number" name="" id="logowidthinput" placeholder="Width [Don't put px]" class="form-control"> <br>
+                              <input type="text" name="" id="logoflexheightinput" placeholder="Flex Height [Boolean]" class="form-control"> <br>
+                              <input type="text" name="" id="logoflexwidthinput" placeholder=" Flex Width [Boolean]" class="form-control"> <br>
+                            </div>
+                            <div class="modal-footer">
+                               <button type="button" class="btn btn-success" onclick="customlogo()" data-dismiss="modal">Generate Basic</button>
+                                <button type="button" class="btn btn-primary" onclick="customlogoadvance()" data-dismiss="modal">Generate Advance</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
                 </div>
             </div>
             
@@ -158,6 +299,23 @@ add_action('after_setup_theme','<span id="funcname">delowar_default_functions</s
                 $("#addthemesupportdata").append(myVal)
             }
 
+            function customheaderadvance()
+            {
+                var getheight = document.getElementById("logoheightinput").value;
+                var getwidth = document.getElementById("logowidthinput").value;
+                var getflexheight = document.getElementById("logoflexheightinput").value;
+                var getflexwidth = document.getElementById("logoflexwidthinput").value;
+
+                var myVal = "<br/>\tadd_theme_support( 'custom-logo', array(<br/>\
+                \t'height'\t=>"+getheight+",<br/>\
+                \t'width'\t\t=>"+getwidth+",<br/>\
+                \t'flex-height'\t=>"+getflexheight+",<br/>\
+                \t'flex-width'\t=>"+getflexwidth+",<br/>\
+                \t'header-text'\t=>array('site-title','site-description'),<br/>\
+                ) );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
             function postformat()
             {
                 var myVal = "<br/>\tadd_theme_support( 'post-formats' );";
@@ -176,6 +334,22 @@ add_action('after_setup_theme','<span id="funcname">delowar_default_functions</s
                 $("#addthemesupportdata").append(myVal)
             }
 
+            function customlogoadvance()
+            {
+                var getheight = document.getElementById("logoheightinput").value;
+                var getwidth = document.getElementById("logowidthinput").value;
+                var getflexheight = document.getElementById("logoflexheightinput").value;
+                var getflexwidth = document.getElementById("logoflexwidthinput").value;
+                var myVal = "<br/>\tadd_theme_support( 'custom-logo', array(<br/>\
+                \t'height'\t=>"+getheight+",<br/>\
+                \t'width'\t\t=>"+getwidth+",<br/>\
+                \t'flex-height'\t=>"+getflexheight+",<br/>\
+                \t'flex-width'\t=>"+getflexwidth+",<br/>\
+                \t'header-text'\t=>array('site-title','site-description'),<br/>\
+                ) );";
+                $("#addthemesupportdata").append(myVal)
+            }
+
             function startercontent()
             {
                 var myVal = "<br/>\tadd_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );";
@@ -184,7 +358,9 @@ add_action('after_setup_theme','<span id="funcname">delowar_default_functions</s
             
             function textdomain()
             {
-                var myVal = "<br/>\tadd_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );";
+                var mydomain = document.getElementById("mydomaininput").value;
+                var folder = document.getElementById("folderinput").value;
+                var myVal = "<br/>\tload_theme_textdomain( '"+mydomain+"', get_theme_file_uri('"+folder+"' );";
                 $("#addthemesupportdata").append(myVal)
             }
 

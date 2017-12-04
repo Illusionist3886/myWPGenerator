@@ -50,3 +50,6 @@ Route::get('/GeneralFunctions', function () {
 Route::get('/AddThemeSupport', function () {
     return view('myGenCore.AddThemeSupport');
 });
+Route::get('/CustomPost', function () {
+    return view('myGenCore.CustomPost');
+});
