@@ -109,6 +109,13 @@
                                 <li>
                                     <a href="{{ url('/') }}/GeneralPost"><i class="fa fa-exchange fa-fw"></i> General Post Query</a>
                                 </li>
+                                <li>
+                                    <a href="{{ url('/') }}/CustomPost"><i class="fa fa-exchange fa-fw"></i>CustomPost</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="nav nav-second-level">
                             </ul>
                         </li>
                         <li>

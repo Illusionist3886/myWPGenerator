@@ -9,6 +9,7 @@
                         <pre>&lt;?php bloginfo('home'); ?&gt;
 &lt;?php bloginfo('charset'); ?&gt;
 &lt;?php bloginfo('description'); ?&gt;
+&lt;?php comments_template(); ?&gt;
                         </pre>
                         <pre id="readmore">function read_more($limit)
 {
