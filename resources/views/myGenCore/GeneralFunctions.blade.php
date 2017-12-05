@@ -26,7 +26,14 @@
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
-                
+                <div class="col-md-12" id="amarbal">
+                    <div class="inner">1</div>
+<div class="inner2">1</div>
+<div class="inner">1</div>
+                </div>
+                <button class="btn btn-success ambal" data-clipboard-target="#amarbal">
+                                    Copy Function
+                                </button>
             </div>
             <!-- /.row -->
             <!-- /.row -->
@@ -55,6 +62,31 @@
         <script src="{{ url('/') }}/userDash/assets/js/clipboard.min.js"></script>
         <script>
             var clipboard = new Clipboard('.postqugen');
+            var clipboard = new Clipboard('.ambal');
+        </script>
+        <script>
+            $(function () {
+    $(".inner, .inner2").dblclick(function (e) {
+        e.stopPropagation();
+        var currentEle = $(this);
+        var value = $(this).html();
+        updateVal(currentEle, value);
+    });
+});
+
+function updateVal(currentEle, value) {
+    $(currentEle).html('<input class="thVal" type="text" value="' + value + '" />');
+    $(".thVal").focus();
+    $(".thVal").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $(currentEle).html($(".thVal").val().trim());
+        }
+    });
+
+    $(document).click(function () {
+            $(currentEle).html($(".thVal").val().trim());
+    });
+}
         </script>
     </body>
 
